@@ -17,17 +17,17 @@ if __name__ == "__main__":
 
     sys.path.append("..")
 
-    import tests.sudoku_tests
-    from src.check_columns import get_column_count
+    from tests import sudoku_tests
+    from src import check_columns
 
     tests = [
-        tests.sudoku_tests.get_correct_test(),
-        tests.sudoku_tests.get_float_incorrect_test(),
-        tests.sudoku_tests.get_out_of_range_lower_not_square_incorrect_test(),
-        tests.sudoku_tests.get_out_of_range_upper_incorrect_test(),
-        tests.sudoku_tests.get_string_incorrect_test(),
+        sudoku_tests.get_correct_test(),
+        sudoku_tests.get_float_incorrect_test(),
+        sudoku_tests.get_out_of_range_lower_not_square_incorrect_test(),
+        sudoku_tests.get_out_of_range_upper_incorrect_test(),
+        sudoku_tests.get_string_incorrect_test(),
     ]
     for test, expected_value in tests:
         print(
-            f"{check_nums(test, get_column_count(test))}, expected value: {expected_value}"
+            f"{check_nums(test, check_columns.get_column_count(test))}, expected value: {expected_value}"
         )

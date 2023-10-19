@@ -14,11 +14,11 @@ if __name__ == "__main__":
 
     sys.path.append("..")
 
-    import tests.sudoku_tests
+    from tests import sudoku_tests
 
     tests = [
-        tests.sudoku_tests.get_correct_test(),
-        tests.sudoku_tests.get_repeating_row_col_incorrect_test(),
+        sudoku_tests.get_correct_test(),
+        sudoku_tests.get_repeating_row_col_incorrect_test(),
     ]
     for test, expected_value in tests:
         print(f"{check_rows(test)}, expected value: {expected_value}")
