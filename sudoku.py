@@ -14,18 +14,3 @@ def check_sudoku(sudoku: List[List[int]]) -> bool:
         and check_columns(sudoku)
         and check_nums(sudoku, columns)
     )
-
-
-if __name__ == "__main__":
-    from tests import sudoku_tests
-
-    tests = [
-        sudoku_tests.get_correct_test(),
-        sudoku_tests.get_out_of_range_lower_not_square_incorrect_test(),
-        sudoku_tests.get_out_of_range_upper_incorrect_test(),
-        sudoku_tests.get_repeating_col_incorrect_test(),
-        sudoku_tests.get_repeating_row_col_incorrect_test(),
-        sudoku_tests.get_string_incorrect_test(),
-    ]
-    for test, expected_value in tests:
-        print(f"{check_sudoku(test)}, expected value: {expected_value}")
