@@ -3,7 +3,7 @@ Validates if a sudoku is valid or not.
 
 ## Usage
 ```bash
-python3 -m pip install -r requirements.txt
+python3 -m pip install -U -r requirements.dev.txt
 python3 sudoku.py # Will run tests in the tests directory
 ```
 
