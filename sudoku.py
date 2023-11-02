@@ -27,5 +27,7 @@ if __name__ == "__main__":
         common_tests.get_repeating_row_col_incorrect_test(),
         common_tests.get_string_incorrect_test(),
     ]
-    for test, expected_value in tests:
-        print(f"{check_sudoku(test)}, expected value: {expected_value}")
+    for test in tests:
+        print(
+            f"{check_sudoku(test.sudoku_to_test)}, expected value: {test.expected_value}"
+        )
